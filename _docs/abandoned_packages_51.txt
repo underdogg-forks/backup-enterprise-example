@@ -1,0 +1,2 @@
+arcanedev/settings is abandoned, you should avoid using it. Use arcanedev/laravel-settings instead.
+phpoffice/phpexcel is abandoned, you should avoid using it. Use phpoffice/phpspreadsheet instead.

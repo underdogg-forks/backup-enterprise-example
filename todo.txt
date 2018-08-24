@@ -1,0 +1,1 @@
+composer require cviebrock/eloquent-taggable cviebrock/eloquent-sluggable --sort-packages
