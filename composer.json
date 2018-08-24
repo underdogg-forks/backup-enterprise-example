@@ -1,9 +1,12 @@
 {
-    "name": "laravel/laravel",
-    "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
-    "license": "MIT",
-    "type": "project",
+  "name": "laravel/laravel",
+  "description": "The Laravel Framework.",
+  "keywords": [
+    "framework",
+    "laravel"
+  ],
+  "license": "MIT",
+  "type": "project",
   "minimum-stability": "dev",
   "prefer-stable": true,
   "config": {
@@ -11,8 +14,8 @@
     "sort-packages": true,
     "optimize-autoloader": true
   },
-    "require": {
-        "php": ">=5.6.4",
+  "require": {
+    "php": ">=5.6.4",
     "arcanedev/laravel-settings": "0.1",
     "barryvdh/laravel-debugbar": "^2.4@dev",
     "barryvdh/laravel-ide-helper": "^2.4@dev",
@@ -24,7 +27,7 @@
     "garethp/php-ews": "^0.9.6",
     "jenssegers/agent": "^2.4",
     "laracasts/flash": "~1.3",
-        "laravel/framework": "5.3.*",
+    "laravel/framework": "5.3.*",
     "nwidart/laravel-modules": "^1.0",
     "libern/laravel-sql-logging": "^1.0@dev",
     "mexitek/phpcolors": "dev-master",
@@ -34,44 +37,44 @@
     "tylercd100/lern": "^3.8.1",
     "yaap/theme": "2.*",
     "zizaco/entrust": "dev-laravel-5"
-    },
-    "require-dev": {
+  },
+  "require-dev": {
     "filp/whoops": "^2.2",
-        "fzaninotto/faker": "~1.4",
+    "fzaninotto/faker": "~1.4",
     "jeroen-g/laravel-packager": "dev-master",
-        "mockery/mockery": "0.9.*",
+    "mockery/mockery": "0.9.*",
     "phpspec/phpspec": "~2.1",
-        "phpunit/phpunit": "~5.0",
-        "symfony/css-selector": "3.1.*",
-        "symfony/dom-crawler": "3.1.*"
-    },
-    "autoload": {
-        "classmap": [
-            "database"
-        ],
-        "psr-4": {
-            "App\\": "app/"
-        }
-    },
-    "autoload-dev": {
-        "classmap": [
-            "tests/TestCase.php"
-        ]
-    },
-    "scripts": {
-        "post-root-package-install": [
-            "php -r \"file_exists('.env') || copy('.env.example', '.env');\""
-        ],
-        "post-create-project-cmd": [
-            "php artisan key:generate"
-        ],
-        "post-install-cmd": [
-            "Illuminate\\Foundation\\ComposerScripts::postInstall",
-            "php artisan optimize"
-        ],
-        "post-update-cmd": [
-            "Illuminate\\Foundation\\ComposerScripts::postUpdate",
-            "php artisan optimize"
-        ]
+    "phpunit/phpunit": "~5.0",
+    "symfony/css-selector": "3.1.*",
+    "symfony/dom-crawler": "3.1.*"
+  },
+  "autoload": {
+    "classmap": [
+      "database"
+    ],
+    "psr-4": {
+      "App\\": "app/"
     }
+  },
+  "autoload-dev": {
+    "classmap": [
+      "tests/TestCase.php"
+    ]
+  },
+  "scripts": {
+    "post-root-package-install": [
+      "php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+    ],
+    "post-create-project-cmd": [
+      "php artisan key:generate"
+    ],
+    "post-install-cmd": [
+      "Illuminate\\Foundation\\ComposerScripts::postInstall",
+      "php artisan optimize"
+    ],
+    "post-update-cmd": [
+      "Illuminate\\Foundation\\ComposerScripts::postUpdate",
+      "php artisan optimize"
+    ]
+  }
 }

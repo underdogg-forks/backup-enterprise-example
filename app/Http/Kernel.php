@@ -30,6 +30,12 @@ class Kernel extends HttpKernel
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
             \App\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
+            //\App\Http\Middleware\ThemeSelector::class,
+            \App\Http\Middleware\LocaleSelector::class,
+            //\App\Http\Middleware\WalledGarden::class,
+
+            //\Arcanedev\Settings\Http\Middleware\SettingsMiddleware::class,
+
         ],
 
         'api' => [
@@ -51,6 +57,7 @@ class Kernel extends HttpKernel
         'bindings' => \Illuminate\Routing\Middleware\SubstituteBindings::class,
         'can' => \Illuminate\Auth\Middleware\Authorize::class,
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
+        //'authorize' => \App\Http\Middleware\AuthorizeRoute::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
     ];
 }
