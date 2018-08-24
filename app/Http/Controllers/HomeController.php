@@ -12,12 +12,13 @@ class HomeController extends Controller
     /**
      * @param Application $app
      * @param Audit $audit
+     * //Application $app, Audit $audit
      */
-    public function __construct(Application $app, Audit $audit)
+    public function __construct()
     {
-        parent::__construct($app, $audit);
+        /*parent::__construct($app, $audit);
         // Set default crumbtrail for controller.
-        session(['crumbtrail.leaf' => 'home']);
+        session(['crumbtrail.leaf' => 'home']);*/
     }
 
     /**
@@ -25,13 +26,25 @@ class HomeController extends Controller
      */
     public function index(Request $request)
     {
-        $homeRouteName = 'welcome';
+        $homeRouteName = 'testme';
 
         try {
             $homeCandidateName = Setting::get('app.home_route');
             $homeRouteName = $homeCandidateName;
         } catch (Exception $ex) {
         } // Eat the exception will default to the welcome route.
+
+
+if(!isset($homeCandidateName) || empty($homeCandidateName))
+{
+    $homeRouteName = 'dashboard';
+}
+
+
+
+
+
+
 
         $request->session()->reflash();
         return Redirect::route($homeRouteName);

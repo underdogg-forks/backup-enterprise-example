@@ -169,11 +169,15 @@ return [
 
         Barryvdh\Debugbar\ServiceProvider::class,
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
-        //Collective\Html\HtmlServiceProvider::class,
+        Collective\Html\HtmlServiceProvider::class,
         Laracasts\Flash\FlashServiceProvider::class,
         Baum\Providers\BaumServiceProvider::class,
         Creativeorange\Gravatar\GravatarServiceProvider::class,
         Jenssegers\Agent\AgentServiceProvider::class,
+        Arcanedev\LaravelSettings\SettingsServiceProvider::class,
+
+
+
 
         /*
          * Application Service Providers...
@@ -183,6 +187,11 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+
+
+
+        App\Providers\MenuBuilderServiceProvider::class,
+        App\Providers\SettingServiceProvider::class,
 
     ],
 
@@ -232,22 +241,23 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
-        //'Form' => Collective\Html\FormFacade::class,
-        //'Html' => Collective\Html\HtmlFacade::class,
+        'Form' => Collective\Html\FormFacade::class,
+        'Html' => Collective\Html\HtmlFacade::class,
 
 
-        //'Debugbar' => Barryvdh\Debugbar\Facade::class,
-        //'Flash' => Laracasts\Flash\Flash::class,
+        'Debugbar' => Barryvdh\Debugbar\Facade::class,
+        'Flash' => Laracasts\Flash\Flash::class,
 
 
         //'Entrust' => Zizaco\Entrust\EntrustFacade::class,
-        //'MenuBuilder' => App\Facades\MenuBuilderFacade::class,
+        'MenuBuilder' => App\Facades\MenuBuilderFacade::class,
         //'Module' => Sroutier\LESKModules\Facades\Module::class,
 
-        //'Gravatar' => Creativeorange\Gravatar\Facades\Gravatar::class,
+        'Gravatar' => Creativeorange\Gravatar\Facades\Gravatar::class,
 
         // Commented out to force the usage of the custom Setting facade below.
         //'Setting' => Arcanedev\Settings\Facades\Setting::class,
+        'Setting' => Arcanedev\LaravelSettings\Facades\Settings::class,
         //'Setting' => App\Facades\SettingFacade::class,
 
 
